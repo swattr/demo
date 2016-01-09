@@ -1,0 +1,16 @@
+{
+  "name": "Swattr Example",
+  "description": "Swattr example application.",
+  "keywords": ["swattr", "ruby", "rails"],
+  "repository": "https://github.com/swattr/swattr_example",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "rails g swattr:install && rake swattr:install:migrations && rake db:migrate"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret_token"
+    }
+  }
+}
