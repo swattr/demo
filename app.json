@@ -5,12 +5,16 @@
   "repository": "https://github.com/swattr/swattr_example",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "rails g swattr:install && rake swattr:install:migrations && rake db:migrate"
+    "postdeploy": "bundle exec bin/setup"
   },
   "env": {
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     }
-  }
+  },
+  "addons": [
+    "postmark:10k",
+    "heroku-postgresql:hobby-dev"
+  ]
 }
