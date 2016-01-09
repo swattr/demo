@@ -4,12 +4,13 @@
   "keywords": ["swattr", "ruby", "rails"],
   "repository": "https://github.com/swattr/swattr_example",
   "success_url": "/",
-  "scripts": {
-    "postdeploy": "bundle exec bin/setup"
-  },
   "env": {
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "DEVISE_SECRET_KEY": {
+      "description": "A secret key for generating password hashes.",
       "generator": "secret"
     }
   },

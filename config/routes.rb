@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # This line mounts Swattr's routes at the root of your application. If you
+  # would like to change where this engine is mounted, simply change the :at
+  # option to reflect your needs.
+  mount Swattr::Engine, at: "/"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
